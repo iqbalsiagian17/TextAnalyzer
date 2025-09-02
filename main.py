@@ -67,7 +67,7 @@ memasukkan data. Hal sama juga dapat dilakukan untuk Data pembayaran
 Sumbangan Sukarela dan Tabungan Karyawisata.
 """ 
 
-# Fungsi 1: Pencarian kata
+# Pencarian kata
 def hitung_kata(artikel, kata):
     artikel_lower = artikel.lower()
     kata_lower = kata.lower()
@@ -75,11 +75,11 @@ def hitung_kata(artikel, kata):
     jumlah = kata_list.count(kata_lower)
     return jumlah
 
-# Fungsi 2: Penggantian kata
+# Penggantian kata
 def ganti_kata(artikel, kata_lama, kata_baru):
     return artikel.replace(kata_lama, kata_baru)
 
-# Fungsi 3: Mengurutkan kata unik
+# Mengurutkan kata unik
 def urutkan_kata(artikel):
     translator = str.maketrans('', '', string.punctuation)
     artikel_bersih = artikel.translate(translator)
@@ -88,7 +88,6 @@ def urutkan_kata(artikel):
     kata_unik.sort()
     return kata_unik
 
-# Menu Interaktif
 def main():
     while True:
         print("\n=== Program Penalaran Teks ===")
@@ -122,6 +121,5 @@ def main():
         else:
             print("Pilihan tidak valid. Silakan coba lagi.")
 
-# Jalankan program
 if __name__ == "__main__":
     main()
